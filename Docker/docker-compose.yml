@@ -1,0 +1,25 @@
+---
+version: "3"
+
+volumes:
+  sqlserver-data:
+
+services:
+  mssql:
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    user: root
+    volumes:
+      - sqlserver-data:/var/opt/mssql/data
+    env_file:
+      - .env
+    ports:
+      - 1433:1433
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
