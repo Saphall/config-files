@@ -1,6 +1,4 @@
-Docker Compose file to setup dockerized `sqlserver` , `mongodb` databases.
-
-Command:
+Docker Compose file to set up dockerized `sqlserver`, `mongodb` databases.
 
 ```bash
 docker-compose up -d mssql mongodb
